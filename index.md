@@ -1,4 +1,3 @@
 ## Group 2 - Connect Four
 
-Repository for the Group 2 Project - Connect Four
-
+This is the repository where you will find our project
