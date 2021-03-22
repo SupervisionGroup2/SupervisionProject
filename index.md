@@ -13,4 +13,10 @@ layout: default
   – mathworld.wolfram.com</p>
 <img src="Connect_4_Board_and_Box.jpg" alt="Connect 4 image">
 
+<h4>The code</h3>
+<p></p>
+
+<h5>The design</h5>
+<p>We are aiming to recreate the classic look of the game. This is a blue game board, with yellow and red pieces. We will be using java swing for the graphics.</p>
+
 </body>
