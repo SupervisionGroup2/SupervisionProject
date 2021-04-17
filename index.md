@@ -13,7 +13,7 @@ layout: default
   – mathworld.wolfram.com</p>
 <img src="Connect_4_Board_and_Box.jpg" alt="Connect 4 image">
 
-<h4>The code</h3>
+<h4>The code</h4>
 <p>We are using java for this project, and java swing for the graphics.</p>
 
 <h5>The design</h5>
