@@ -18,3 +18,5 @@ how it works:
 the code is very messy and inefficient but I will improve it as I go.
 I will also implement any functions the enable it to communicate the
 matrix with other classes if needed.
+
+to start the programm run main
