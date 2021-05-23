@@ -12,7 +12,7 @@ public class GameState {
 	// This matrix represents the board, the number 0 represents an unclaimed spot,
 	//1 will be yellow and 2 will be red tokens respectively
 	//The columns will be named:  0, 1, 2, 3, 4, 5, 6
-	static int [] [] board = {   {0, 0, 0, 0, 0, 0, 0},
+	int [] [] board = {   {0, 0, 0, 0, 0, 0, 0},
 			{0, 0, 0, 0, 0, 0, 0},
 			{0, 0, 0, 0, 0, 0, 0},
 			{0, 0, 0, 0, 0, 0, 0},
@@ -23,7 +23,7 @@ public class GameState {
 	public void addToken(int column) {
 		board [columnState[column]] [column] = playerTurn;
 
-		// gamestate keeps track of whos turn it is
+		// gamestate keeps track of who's turn it is
 		if (playerTurn==1) {
 			playerTurn=2;
 		} else {
@@ -55,7 +55,7 @@ public class GameState {
 
 
 	@SuppressWarnings("finally")
-	public static int winCheck(){
+	public int winCheck(){
 		int i = 0;
 		int j = 0;
 		int yCounter = 0;
@@ -266,8 +266,18 @@ public class GameState {
 		return 0;
 
 	}
-
+	
+	// returns game board
 	public int[] [] getBoard() {
 		return board;
+	}
+	
+	// returns who's turn it is
+	public int getTurn() {
+		return playerTurn;
+	}
+	
+	public int getColumnState(int column) {
+		return columnState[column];
 	}
 }
