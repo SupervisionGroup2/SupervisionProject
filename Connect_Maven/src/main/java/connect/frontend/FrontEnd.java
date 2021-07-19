@@ -17,13 +17,13 @@ public class FrontEnd {
 	public void run() {
 		// creates JFrame
 		frame = new JFrame("Connect 4");
-		int fwidth = 800;
+		int fwidth = 1400;
 		int fheight = 800;
 		frame.setSize(fwidth, fheight);
 		
 		///// creates GUI panel
 		ConnectPanel panel = new ConnectPanel(state, this);
-		panel.setBounds(0, 0, 800, 800);
+		panel.setBounds(0, 0, 1400, 800);
 		frame.add(panel);
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

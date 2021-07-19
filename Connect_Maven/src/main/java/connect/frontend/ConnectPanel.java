@@ -1,24 +1,28 @@
 package connect.frontend;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
 
 import connect.backend.GameState;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 public class ConnectPanel extends JPanel {
 	GameState state;
 	FrontEnd front;
+	JLabel yellowTurn;
+	JLabel redTurn;
 	
 	public ConnectPanel(GameState s, FrontEnd f) {
 		state = s;
 		front = f;
 		setLayout(null);
-		int x=70;
+		int x=370;
 		JButton button;
 		for (int i=0; i<=6; i++) {
 			button = new JButton();
@@ -37,10 +41,20 @@ public class ConnectPanel extends JPanel {
 		// Retrieves the graphics context
 		Graphics2D graphics2d = (Graphics2D)g;
 
+		// displays the player's turn
+		if (state.getTurn()==1) {
+			graphics2d.setColor(Color.YELLOW);
+			drawCircleCentre(graphics2d, 150, 400, 150);			
+		}
+		if (state.getTurn()==2) {
+			graphics2d.setColor(Color.RED);
+			drawCircleCentre(graphics2d, 1200, 400, 150);
+		}
+		
 		// draws board
 		graphics2d.setColor(Color.BLUE);
-		graphics2d.fillRect(50, 100, 700, 600);
-
+		graphics2d.fillRect(350, 100, 700, 600);
+		
 		// draws the circles
 		int px;
 		// py starts at the y co-ordinate of the board + 50
@@ -62,7 +76,7 @@ public class ConnectPanel extends JPanel {
 				default:
 					graphics2d.setColor(Color.WHITE);
 				}
-				drawCircleCentre(graphics2d, px, py, 80);
+				drawCircleCentre(graphics2d, px + 300, py, 80);
 				px+=100;
 			}
 			py += 100;
