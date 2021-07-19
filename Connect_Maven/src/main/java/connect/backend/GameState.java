@@ -21,35 +21,40 @@ public class GameState {
 	};
 
 	public void addToken(int column) {
-		board [columnState[column]] [column] = playerTurn;
-
-		// gamestate keeps track of who's turn it is
-		if (playerTurn==1) {
-			playerTurn=2;
-		} else {
-			playerTurn=1;
-		}
-
-		columnState[column] = columnState[column] - 1;
-
-		for (int i = 0; i < board.length; i++) { //this equals to the row in our matrix.
-			for (int j = 0; j < board[i].length; j++) { //this equals to the column in each row.
-				System.out.print(board[i][j] + " ");
-			};
+		if (columnState[column] >= 0) {
+			// this if statement means the player cannot place pieces above the board
+			board [columnState[column]] [column] = playerTurn;
+	
+			// gamestate keeps track of who's turn it is
+			if (playerTurn==1) {
+				playerTurn=2;
+			} else {
+				playerTurn=1;
+			}
+	
+			columnState[column] = columnState[column] - 1;
+	
+			for (int i = 0; i < board.length; i++) { //this equals to the row in our matrix.
+				for (int j = 0; j < board[i].length; j++) { //this equals to the column in each row.
+					System.out.print(board[i][j] + " ");
+				};
+				System.out.println();
+	
+			}
+	
+			//System.out.print(columnState[0]);
+			//System.out.print(columnState[1]);
+			//System.out.print(columnState[2]);
+			//System.out.print(columnState[3]);
+			//System.out.print(columnState[4]);
+			//System.out.print(columnState[5]);
 			System.out.println();
-
+	
+	
+			System.out.println("current winner: " + winCheck() + " (0 = none yet, 1 = yellow, 2 = red)");
+		} else {
+			System.out.println("Invalid turn, try again");
 		}
-
-		//System.out.print(columnState[0]);
-		//System.out.print(columnState[1]);
-		//System.out.print(columnState[2]);
-		//System.out.print(columnState[3]);
-		//System.out.print(columnState[4]);
-		//System.out.print(columnState[5]);
-		System.out.println();
-
-
-		System.out.println("current winner: " + winCheck() + " (0 = none yet, 1 = yellow, 2 = red)");
 	};
 
 
