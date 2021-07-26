@@ -13,13 +13,24 @@ public class FrontEnd {
 	GameState state = new GameState();
 	JFrame frame = new JFrame();
 
-	// this method runs the main game
-	public void run() {
+	public void menu() {
 		// creates JFrame
 		frame = new JFrame("Connect 4");
 		int fwidth = 1400;
 		int fheight = 800;
 		frame.setSize(fwidth, fheight);
+		
+		MenuPanel panel = new MenuPanel(this);
+		panel.setBounds(0, 0, 1400, 800);
+		frame.add(panel);
+		
+		frame.setVisible(true);
+	}
+	
+	// this method runs the main game
+	public void run() {
+		// removes menu panel
+		frame.getContentPane().removeAll();
 		
 		///// creates GUI panel
 		ConnectPanel panel = new ConnectPanel(state, this);
@@ -38,7 +49,7 @@ public class FrontEnd {
 		frame.getContentPane().removeAll();
 		
 		JPanel panel = new JPanel(new GridBagLayout());
-		panel.setBounds(0, 0, 800, 800);
+		panel.setBounds(0, 0, 1400, 800);
 		JLabel label;
 		if (state.winCheck()==1) {
 			label = new JLabel("Yellow Wins!", JLabel.CENTER);
