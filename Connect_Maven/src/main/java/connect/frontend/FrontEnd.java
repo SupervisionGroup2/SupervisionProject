@@ -2,6 +2,7 @@ package connect.frontend;
 
 import javax.swing.*;
 
+import connect.backend.AI;
 import connect.backend.GameState;
 
 import java.awt.FlowLayout;
@@ -10,7 +11,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.*;
 
 public class FrontEnd {
-	GameState state = new GameState();
+	GameState state;
 	JFrame frame = new JFrame();
 
 	public void menu() {
@@ -28,9 +29,18 @@ public class FrontEnd {
 	}
 	
 	// this method runs the main game
-	public void run() {
+	public void run(int num) {
+		// if num is 1, PVP
+		// if num is 2, PVE
+		
 		// removes menu panel
 		frame.getContentPane().removeAll();
+		
+		if (num==1) {
+			state = new GameState();
+		} else {
+			state = new AI();
+		}
 		
 		///// creates GUI panel
 		ConnectPanel panel = new ConnectPanel(state, this);

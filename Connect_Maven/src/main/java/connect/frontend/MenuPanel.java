@@ -16,7 +16,7 @@ public class MenuPanel extends JPanel {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent a) {
 				// change this code to implement the player vs player mode
-				front.run();
+				front.run(1);
 			}
 		});
 		add(button);
@@ -25,7 +25,7 @@ public class MenuPanel extends JPanel {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent a) {
 				// change this code to implement the player vs AI mode
-				front.run();
+				front.run(2);
 			}
 		});
 		add(button);

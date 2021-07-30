@@ -28,7 +28,7 @@ public class SelectColumnEventListener implements ActionListener {
 		if (!(state.winCheck()==0)) {
 			panel.endGame();
 		}
-	} 
+	}
 
 	public void actionPerformed(ActionEvent e) {
 		buttonAction(e);
