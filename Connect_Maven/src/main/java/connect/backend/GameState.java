@@ -144,7 +144,7 @@ public class GameState {
 
 
 		/////////////////////////////////////////////////////////// checks for diagonal (/) win con 
-
+/*
 		for (int y = 0; y < 6; y++) {
 
 			for (int x = 0; x < 7; x++) {
@@ -195,7 +195,7 @@ public class GameState {
 		return 0;
 
 	}
-
+*/
 	public int[] [] getBoard() {
 		return board;
 	}
