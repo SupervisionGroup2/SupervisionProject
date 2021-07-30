@@ -2,12 +2,12 @@ package connect.backend;
 
 public class GameState {
 	//this list will keep track of how many tokens there are in a specific column
-	static int [] columnState = {5, 5, 5, 5, 5, 5, 5};
+	int [] columnState = {5, 5, 5, 5, 5, 5, 5};
 
 	// This matrix represents the board, the number 0 represents an unclaimed spot,
 	//1 will be yellow and 2 will be red tokens respectively
 	//The columns will be named:  0, 1, 2, 3, 4, 5, 6
-	static int [] [] board = {   {0, 0, 0, 0, 0, 0, 0},
+	int [] [] board = {   {0, 0, 0, 0, 0, 0, 0},
 			{0, 0, 0, 0, 0, 0, 0},
 			{0, 0, 0, 0, 0, 0, 0},
 			{0, 0, 0, 0, 0, 0, 0},
@@ -45,7 +45,7 @@ public class GameState {
 	};
 
 
-	public static int winCheck(){
+	public int winCheck(){
 		int yCounter = 0;
 		int xCounter = 0;
 		/////////////////////////////// checks for vertical win con (win condition)
