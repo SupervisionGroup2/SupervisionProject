@@ -19,7 +19,7 @@ public class AI extends GameState {
 		for (int i = 0; i<7; i++) {
 			System.out.println("\nAI - trial " + i);
 
-			int	x = addTokenAI(i);
+			int	x = addTokenAI(i, 2);
 			System.out.println("\n x: " + x + "\n");
 			System.out.println();
 			for (int i1 = 0; i1 < board.length; i1++) { 
@@ -51,7 +51,7 @@ public class AI extends GameState {
 		for (int i = 0; i<7; i++) {
 			System.out.println("\nAI - trial " + i);
 
-			int	x = addTokenAI(i);
+			int	x = addTokenAI(i, 1);
 			System.out.println("\n x: " + x + "\n");
 			System.out.println();
 			for (int i1 = 0; i1 < board.length; i1++) { 
@@ -90,10 +90,10 @@ public class AI extends GameState {
 
 	};
 
-	public int addTokenAI(int column) { 
+	public int addTokenAI(int column, int colour) { 
 		if (columnState[column] >= 0) {
 
-			board [columnState[column]] [column] = 2;
+			board [columnState[column]] [column] = colour;
 			columnState[column] = columnState[column] - 1;
 
 			int pathend = winCheck();
