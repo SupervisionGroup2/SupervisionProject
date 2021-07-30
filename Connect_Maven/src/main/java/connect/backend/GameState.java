@@ -118,7 +118,7 @@ public class GameState {
 			}
 
 			xCounter = 0;
-
+/*
 			for (int x = 0; x < 7; x++) {
 
 				//System.out.println("x = " + x);
@@ -139,12 +139,12 @@ public class GameState {
 				}
 
 			}
-
+*/
 		}
 
 
 		/////////////////////////////////////////////////////////// checks for diagonal (/) win con 
-/*
+
 		for (int y = 0; y < 6; y++) {
 
 			for (int x = 0; x < 7; x++) {
@@ -167,14 +167,12 @@ public class GameState {
 			}
 
 			xCounter = 0;
-
+/*
 			for (int x = 0; x < 7; x++) {
 
 				try 
 				{
-					if (board[x] [y-x] == 1) {xCounter++; 
-
-					};
+					if (board[x] [y-x] == 1) {xCounter++;};
 					if (xCounter == 4) {System.out.println("diag2: YELLOW (1) WINS"); return 1;}
 					if (board[x] [y-x] == 2 || board[x] [y-x] == 0) {xCounter = 0;};
 
@@ -190,9 +188,9 @@ public class GameState {
 				}
 
 			}
-
+*/
 		}
-		*/
+		
 		return 0;
 
 	}
