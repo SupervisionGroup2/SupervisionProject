@@ -77,7 +77,10 @@ public class AI extends GameState {
 				if(i == 6) {
 					Random rand = new Random();
 					int y = rand.nextInt(7); 
-
+					
+					while (columnState[y] == 0) {
+						y = rand.nextInt(7);
+					}
 					board [columnState[y]] [y] = 2;
 					columnState[y] = columnState[y] - 1;
 					return;
