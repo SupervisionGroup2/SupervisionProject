@@ -2,6 +2,8 @@ package connect.frontend;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.swing.JButton;
 
@@ -26,9 +28,15 @@ public class SelectColumnEventListener implements ActionListener {
 		state.addToken(column);
 		panel.repaint();
 		if (!(state.winCheck()==0)) {
-			panel.endGame();
+			state.stop();
+			Timer timer = new Timer();
+			timer.schedule(new TimerTask() {
+				public void run() {
+					panel.endGame();
+				}
+			}, 3000 );
 		}
-	} 
+	}
 
 	public void actionPerformed(ActionEvent e) {
 		buttonAction(e);
