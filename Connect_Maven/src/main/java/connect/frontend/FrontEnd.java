@@ -55,7 +55,6 @@ public class FrontEnd {
 
 	// this method is run when there is a winner
 	public void end() {
-		Thread.sleep(4000);
 		// removes all panels, then adds panel with label displaying winner
 		frame.getContentPane().removeAll();
 
