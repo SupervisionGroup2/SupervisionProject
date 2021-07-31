@@ -74,19 +74,47 @@ public class AI extends GameState {
 					columnState[x] = columnState[x] - 1;
 					return;
 				}
+                         
+		        if(i == 6) {
+				Random rand = new Random();
+				int y = rand.nextInt(7); 
+					
+				int l = 0;
+				while (l == 0) {
+					if (columnState[y] >= 0) {
+						board [columnState[y]] [y] = 2;
+						columnState[y] = columnState[y] - 1;
+						l = 1;
+						return;
+					}
+					else {
+						y = rand.nextInt(6);
+					}
+				}
+					
+			}								
+			}else {
+				System.out.print("too full : " + x);
+				
 				if(i == 6) {
 					Random rand = new Random();
 					int y = rand.nextInt(7); 
 					
-					while (columnState[y] == 0) {
-						y = rand.nextInt(7);
+					int l = 0;
+					while (l == 0) {
+						if (columnState[y] >= 0) {
+							board [columnState[y]] [y] = 2;
+							columnState[y] = columnState[y] - 1;
+							l = 1;
+							return;
+						}
+						else {
+							y = rand.nextInt(6);
+						}
 					}
-					board [columnState[y]] [y] = 2;
-					columnState[y] = columnState[y] - 1;
-					return;
-				}							
-			}else {
-				System.out.print("too full : " + x);
+					
+				}
+				
 			}
 			winCheck();
 		}
