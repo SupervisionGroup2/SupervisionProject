@@ -60,7 +60,7 @@ public int winCheck(){
 				if (xCounter == 4) {System.out.println("col: YELLOW (1) WINS"); return 1;}else {xCounter=0;}
 				
 				if (board[y] [x] == 2) {yCounter++; if (board[y+1] [x] == 2) {yCounter++;  if (board[y+2] [x] == 2) {yCounter++;}  if (board[y+3] [x] == 2) {yCounter++;} } };
-				if (xCounter == 4) {System.out.println("col: RED (2) WINS"); return 2;}else {yCounter=0;}
+				if (yCounter == 4) {System.out.println("col: RED (2) WINS"); return 2;}else {yCounter=0;}
 			}catch (Exception e) {
 				yCounter=0;
 				xCounter=0;
@@ -84,7 +84,7 @@ public int winCheck(){
 				if (xCounter == 4) {System.out.println("row: YELLOW (1) WINS"); return 1;}else {xCounter=0;}
 				
 				if (board[y] [x] == 2) {yCounter++; if (board[y] [x+1] == 2) {yCounter++;  if (board[y] [x+2] == 2) {yCounter++;}  if (board[y] [x+3] == 2) {yCounter++;} } };
-				if (xCounter == 4) {System.out.println("row: RED (2) WINS"); return 2;}else {yCounter=0;}
+				if (yCounter == 4) {System.out.println("row: RED (2) WINS"); return 2;}else {yCounter=0;}
 			}catch (Exception e) {
 				yCounter=0;
 				xCounter=0;
