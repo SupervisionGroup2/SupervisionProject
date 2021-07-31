@@ -52,7 +52,7 @@ public int winCheck(){
 	// checks for vertical win con (win condition)
 	for (int y = 0; y < 7; y++) {
 
-		for (int x = 0; x < 6; x++) {
+		for (int x = 0; x < 7; x++) {
 
 			try 
 			{
@@ -74,7 +74,7 @@ public int winCheck(){
 		}
 	
 	// checks for horizontal win con
-	for (int y = 0; y < 6; y++) {
+	for (int y = 0; y < 7; y++) {
 
 		for (int x = 0; x < 7; x++) {
 
@@ -97,7 +97,7 @@ public int winCheck(){
 	}
 
 	// checks for diagonal win con 
-	for (int y = 0; y < 6; y++) {
+	for (int y = 0; y < 7; y++) {
 		
 		for (int x = 0; x < 7; x++) {
 			try 
