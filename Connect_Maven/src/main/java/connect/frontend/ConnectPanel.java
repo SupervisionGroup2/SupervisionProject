@@ -90,11 +90,6 @@ public class ConnectPanel extends JPanel {
 	}
 
 	public void endGame() {
-	try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 		front.end();
 	}
 }
