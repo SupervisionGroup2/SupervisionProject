@@ -61,10 +61,13 @@ public class FrontEnd {
 		JPanel panel = new JPanel(new GridBagLayout());
 		panel.setBounds(0, 0, 1400, 800);
 		JLabel label;
-		if (state.winCheck()==1) {
+		int winState = state.winCheck();
+		if (winState==1) {
 			label = new JLabel("Yellow Wins!", JLabel.CENTER);
-		} else {
+		} else if (winState==2){
 			label = new JLabel("Red Wins!", JLabel.CENTER);
+		} else {
+			label = new JLabel("<html>No winner!<br>The grid is full</html>", JLabel.CENTER);
 		}
 		label.setFont(new Font("Serif", Font.PLAIN, 50));
 
